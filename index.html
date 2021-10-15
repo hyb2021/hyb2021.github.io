@@ -187,7 +187,7 @@
       
         <h1 id="2021年10月9日更新"><a href="#2021年10月9日更新" class="headerlink" title="2021年10月9日更新:"></a>2021年10月9日更新:</h1><p>Hexo博客在部署时遇到很多问题，记录下遇到的问题。</p>
 <h1 id="1-把本地内容推到github遇到报错”fatal-unable-to-auto-detect-email-address”"><a href="#1-把本地内容推到github遇到报错”fatal-unable-to-auto-detect-email-address”" class="headerlink" title="1.把本地内容推到github遇到报错”fatal: unable to auto-detect email address”"></a>1.把本地内容推到github遇到报错”fatal: unable to auto-detect email address”</h1><p>在blog目录下执行  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clean  //清除缓存</span><br><span class="line">git g  //生成静态文件</span><br><span class="line">git d  //部署到GitHub</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  //清除缓存</span><br><span class="line">hexo g  //生成静态文件</span><br><span class="line">hexo d  //部署到GitHub</span><br></pre></td></tr></table></figure>
 <p>出现报错误<em>fatal: unable to auto-detect email address</em>原因是未配置GitHub用户名何邮箱。  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;git邮箱&quot;</span></span><br><span class="line">git config --global user.name <span class="string">&quot;git用户名&quot;</span></span><br></pre></td></tr></table></figure>
 
