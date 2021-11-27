@@ -78,123 +78,6 @@
 
       <div class="outer">
         <section id="main">
-  <article id="post-基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-inner">
-    
-    
-    <div class="article-meta">
-      
-      <span class="article-date">
-  <i class="fa fa-date"></i>
-  <time class="dt-published" datetime="2021-11-27T07:00:56.555Z" itemprop="datePublished">2021年11月27日</time>
-</span>
-      
-      
-      
-<a href="/2021/11/27/%E5%9F%BA%E7%A1%80/#comments" class="article-comment-link">
-  
-  <i class="fa fa-commt"></i>
-  留言
-</a>
-
-
-    </div>
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="java运行过程"><a href="#java运行过程" class="headerlink" title="java运行过程"></a>java运行过程</h2><ol>
-<li><p>编译:编译器一次把所有*.java文件转成 *.class字节码文件。</p>
-</li>
-<li><p>类加载:java虚拟机首先将编译好的字节码文件加载到内存。</p>
-</li>
-<li><p>解释执行:java虚拟机针对加载到内存中的Java类进行解释运行。</p>
-<p>总结:java程序是由虚拟机进行解释运行的，而不是操作系统。</p>
-</li>
-</ol>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="强类型语言"><a href="#强类型语言" class="headerlink" title="强类型语言"></a>强类型语言</h3><p>要求变量的使用要严格符合规定，所有变量必须先定义后才能使用。</p>
-<h3 id="Java数据类型分为两大类"><a href="#Java数据类型分为两大类" class="headerlink" title="Java数据类型分为两大类"></a>Java数据类型分为两大类</h3><ul>
-<li>基本类型</li>
-<li>引用类型</li>
-</ul>
-<h3 id="浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。"><a href="#浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。" class="headerlink" title="浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。"></a>浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> f=<span class="number">0.1f</span>;</span><br><span class="line"><span class="keyword">double</span> d=<span class="number">1.0</span>/<span class="number">10</span>;</span><br><span class="line">System.out.println(f==d);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">float</span> d1=<span class="number">2332222445555f</span>;</span><br><span class="line"><span class="keyword">float</span> d2=d1+<span class="number">1</span>;</span><br><span class="line">System.out.println(d1);<span class="comment">//2.33222255E12</span></span><br><span class="line">System.out.println(d2);<span class="comment">//2.33222255E12</span></span><br><span class="line">System.out.println(d1==d2);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。"><a href="#java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。" class="headerlink" title="java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。"></a>java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。</h3><p>这里的有些运算指的是java数据类型中<strong>基本类型</strong>，除boolean类型外。</p>
-<p>byte，short，char，int，long，float，double</p>
-<p>低————————————————高</p>
-<h3 id="运算中，不同类型的数据先转化位同一类型，然后运算。"><a href="#运算中，不同类型的数据先转化位同一类型，然后运算。" class="headerlink" title="运算中，不同类型的数据先转化位同一类型，然后运算。"></a>运算中，不同类型的数据先转化位同一类型，然后运算。</h3><p>运算中，范围小的会自动转换成范围大的。</p>
-<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><p>范围大的转成范围小的</p>
-<h3 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h3><p>范围小的转成范围大的</p>
-<h3 id="内存溢出"><a href="#内存溢出" class="headerlink" title="内存溢出"></a>内存溢出</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">129</span>;</span><br><span class="line"><span class="keyword">byte</span> b1=(<span class="keyword">byte</span>)i;</span><br><span class="line">System.out.println(b1);<span class="comment">//-127 byte类型的范围是[-128,127],给129内存溢出了</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> money=<span class="number">10_0000_0000</span>;</span><br><span class="line"><span class="keyword">int</span> years=<span class="number">20</span>;</span><br><span class="line"><span class="keyword">int</span> total1=money*years;<span class="comment">//-1474836480 内存溢出</span></span><br><span class="line"><span class="keyword">long</span> total2=money*years;<span class="comment">//-1474836480 内存依然溢出，因为计算后的数据类型依然时int，转换成long之前已经出现问题</span></span><br><span class="line"><span class="keyword">long</span> total3=((<span class="keyword">long</span>)money)*years;<span class="comment">//20000000000</span></span><br><span class="line">System.out.println(total3);</span><br></pre></td></tr></table></figure>
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <div class="article-tag-wrap">
-          
-
-          
-          
-
-
-        </div>
-      
-      
-      
-    </footer>
-  </div>
-</article>
-
-
-  <article id="post-帆软" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-inner">
-    
-    
-    <div class="article-meta">
-      
-      <span class="article-date">
-  <i class="fa fa-date"></i>
-  <time class="dt-published" datetime="2021-11-26T13:01:51.889Z" itemprop="datePublished">2021年11月26日</time>
-</span>
-      
-      
-      
-<a href="/2021/11/26/%E5%B8%86%E8%BD%AF/#comments" class="article-comment-link">
-  
-  <i class="fa fa-commt"></i>
-  留言
-</a>
-
-
-    </div>
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="帆软"><a href="#帆软" class="headerlink" title="帆软"></a>帆软</h1><h2 id="1-点击查询前显示所有内容"><a href="#1-点击查询前显示所有内容" class="headerlink" title="1.点击查询前显示所有内容"></a>1.点击查询前显示所有内容</h2><p>点击参数栏，参数栏的属性取消勾选<strong>点击查询前不显示报表内容</strong>。</p>
-<h2 id="2-给报表内容插序号"><a href="#2-给报表内容插序号" class="headerlink" title="2.给报表内容插序号"></a>2.给报表内容插序号</h2>
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <div class="article-tag-wrap">
-          
-
-          
-          
-
-
-        </div>
-      
-      
-      
-    </footer>
-  </div>
-</article>
-
-
   <article id="post-生日计时" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner">
     
@@ -241,6 +124,159 @@
           
 
           
+          
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+  <article id="post-帆软" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/26/%E5%B8%86%E8%BD%AF/">帆软</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2021-10-26T02:13:22.000Z" itemprop="datePublished">2021年10月26日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E5%B8%86%E8%BD%AF/">帆软</a>
+  </div>
+
+      
+      
+<a href="/2021/10/26/%E5%B8%86%E8%BD%AF/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="1-点击查询前显示所有内容"><a href="#1-点击查询前显示所有内容" class="headerlink" title="1.点击查询前显示所有内容"></a>1.点击查询前显示所有内容</h2><p>点击参数栏，参数栏的属性取消勾选<strong>点击查询前不显示报表内容</strong>。</p>
+<h2 id="2-给报表内容插序号"><a href="#2-给报表内容插序号" class="headerlink" title="2.给报表内容插序号"></a>2.给报表内容插序号</h2>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B8%86%E8%BD%AF/" rel="tag">帆软</a></li></ul>
+
+          
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+  <article id="post-基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/26/%E5%9F%BA%E7%A1%80/">java基础注意</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2021-10-26T02:13:22.000Z" itemprop="datePublished">2021年10月26日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </div>
+
+      
+      
+<a href="/2021/10/26/%E5%9F%BA%E7%A1%80/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>编译:编译器一次把所有*.java文件转成 *.class字节码文件。</p>
+</li>
+<li><p>类加载:java虚拟机首先将编译好的字节码文件加载到内存。</p>
+</li>
+<li><p>解释执行:java虚拟机针对加载到内存中的Java类进行解释运行。</p>
+<p>总结:java程序是由虚拟机进行解释运行的，而不是操作系统。</p>
+</li>
+</ol>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="强类型语言"><a href="#强类型语言" class="headerlink" title="强类型语言"></a>强类型语言</h3><p>要求变量的使用要严格符合规定，所有变量必须先定义后才能使用。</p>
+<h3 id="Java数据类型分为两大类"><a href="#Java数据类型分为两大类" class="headerlink" title="Java数据类型分为两大类"></a>Java数据类型分为两大类</h3><ul>
+<li>基本类型</li>
+<li>引用类型</li>
+</ul>
+<h3 id="浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。"><a href="#浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。" class="headerlink" title="浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。"></a>浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> f=<span class="number">0.1f</span>;</span><br><span class="line"><span class="keyword">double</span> d=<span class="number">1.0</span>/<span class="number">10</span>;</span><br><span class="line">System.out.println(f==d);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">float</span> d1=<span class="number">2332222445555f</span>;</span><br><span class="line"><span class="keyword">float</span> d2=d1+<span class="number">1</span>;</span><br><span class="line">System.out.println(d1);<span class="comment">//2.33222255E12</span></span><br><span class="line">System.out.println(d2);<span class="comment">//2.33222255E12</span></span><br><span class="line">System.out.println(d1==d2);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。"><a href="#java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。" class="headerlink" title="java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。"></a>java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。</h3><p>这里的有些运算指的是java数据类型中<strong>基本类型</strong>，除boolean类型外。</p>
+<p>byte，short，char，int，long，float，double</p>
+<p>低————————————————高</p>
+<h3 id="运算中，不同类型的数据先转化位同一类型，然后运算。"><a href="#运算中，不同类型的数据先转化位同一类型，然后运算。" class="headerlink" title="运算中，不同类型的数据先转化位同一类型，然后运算。"></a>运算中，不同类型的数据先转化位同一类型，然后运算。</h3><p>运算中，范围小的会自动转换成范围大的。</p>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><p>范围大的转成范围小的</p>
+<h3 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h3><p>范围小的转成范围大的</p>
+<h3 id="内存溢出"><a href="#内存溢出" class="headerlink" title="内存溢出"></a>内存溢出</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">129</span>;</span><br><span class="line"><span class="keyword">byte</span> b1=(<span class="keyword">byte</span>)i;</span><br><span class="line">System.out.println(b1);<span class="comment">//-127 byte类型的范围是[-128,127],给129内存溢出了</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> money=<span class="number">10_0000_0000</span>;</span><br><span class="line"><span class="keyword">int</span> years=<span class="number">20</span>;</span><br><span class="line"><span class="keyword">int</span> total1=money*years;<span class="comment">//-1474836480 内存溢出</span></span><br><span class="line"><span class="keyword">long</span> total2=money*years;<span class="comment">//-1474836480 内存依然溢出，因为计算后的数据类型依然时int，转换成long之前已经出现问题</span></span><br><span class="line"><span class="keyword">long</span> total3=((<span class="keyword">long</span>)money)*years;<span class="comment">//20000000000</span></span><br><span class="line">System.out.println(total3);</span><br></pre></td></tr></table></figure>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
           
 
 
@@ -410,6 +446,77 @@
 </article>
 
 
+  <article id="post-安装环境" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/12/%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83/">安装环境</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2021-10-12T02:38:29.000Z" itemprop="datePublished">2021年10月12日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </div>
+
+      
+      
+<a href="/2021/10/12/%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Node.js是运行在服务端的JavaScript。</p>
+<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><ol>
+<li>Npm是Node.js的包管理工具。</li>
+<li>我们在Node.js上开发时，会用到很多别人写的JavaScript代码。如果我们要使用别人写的某个包，每次都根据名称搜索一下官方网站，下载代码，解压，再使用，非常繁琐。于是一个集中管理的工具应运而生：大家都把自己开发的模块打包后放到npm官网上，如果要使用，直接通过npm安装就可以直接用，不用管代码存在哪，应该从哪下载。</li>
+<li>如果我们要使用模块A，而模块A又依赖于模块B，模块B又依赖于模块X和模块Y，npm可以根据依赖关系，把所有依赖的包都下载下来并管理起来。否则，靠我们自己手动管理，肯定既麻烦又容易出错。</li>
+</ol>
+<h2 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h2><p>Yarn 对你的代码来说是一个包管理器， 你可以通过它使用全世界开发者的代码，或者分享自己的代码。 Yarn 做这些快捷、安全、可靠，所以你不用担心什么。</p>
+
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+          
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
   <article id="post-Hexo搭建遇到的问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner">
     
@@ -483,81 +590,6 @@
 </article>
 
 
-  <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/10/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-      </header>
-    
-    <div class="article-meta">
-      
-      <span class="article-date">
-  <i class="fa fa-date"></i>
-  <time class="dt-published" datetime="2021-10-09T02:29:49.735Z" itemprop="datePublished">2021年10月09日</time>
-</span>
-      
-  <div class="article-category">
-    <i class="fa fa-classify"></i>
-    <a class="article-category-link" href="/categories/%E5%85%A5%E9%97%A8/">入门</a>
-  </div>
-
-      
-      
-<a href="/2021/10/09/hello-world/#comments" class="article-comment-link">
-  
-  <i class="fa fa-commt"></i>
-  留言
-</a>
-
-
-    </div>
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <div class="article-tag-wrap">
-          
-
-          
-          
-
-
-        </div>
-      
-      
-      
-    </footer>
-  </div>
-</article>
-
-
 
 </section>
         
@@ -570,15 +602,15 @@
       <ul>
         
           <li>
-            <a href="/2021/11/27/%E5%9F%BA%E7%A1%80/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/11/26/%E5%B8%86%E8%BD%AF/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2021/11/16/%E7%94%9F%E6%97%A5%E8%AE%A1%E6%97%B6/">生日计时</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/26/%E5%B8%86%E8%BD%AF/">帆软</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/26/%E5%9F%BA%E7%A1%80/">java基础注意</a>
           </li>
         
           <li>
@@ -599,7 +631,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title"><i class="fa fa-tag"></i> 标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 10px;">知乎</a> <a href="/tags/%E9%81%93%E5%BE%B7%E7%BB%8F/" style="font-size: 10px;">道德经</a>
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/%E5%B8%86%E8%BD%AF/" style="font-size: 10px;">帆软</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 10px;">知乎</a> <a href="/tags/%E9%81%93%E5%BE%B7%E7%BB%8F/" style="font-size: 10px;">道德经</a>
     </div>
   </div>
 
@@ -608,7 +640,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title"><i class="fa fa-classify"></i> 分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%A5%E9%97%A8/">入门</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%91%98%E6%8A%84/">摘抄</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%A5%E9%97%A8/">入门</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B8%86%E8%BD%AF/">帆软</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%91%98%E6%8A%84/">摘抄</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -628,7 +660,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title"><i class="fa fa-tag"></i> 标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E4%B9%8E/" rel="tag">知乎</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%81%93%E5%BE%B7%E7%BB%8F/" rel="tag">道德经</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B8%86%E8%BD%AF/" rel="tag">帆软</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E4%B9%8E/" rel="tag">知乎</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%81%93%E5%BE%B7%E7%BB%8F/" rel="tag">道德经</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
