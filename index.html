@@ -78,6 +78,123 @@
 
       <div class="outer">
         <section id="main">
+  <article id="post-基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2021-11-27T07:00:56.555Z" itemprop="datePublished">2021年11月27日</time>
+</span>
+      
+      
+      
+<a href="/2021/11/27/%E5%9F%BA%E7%A1%80/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="java运行过程"><a href="#java运行过程" class="headerlink" title="java运行过程"></a>java运行过程</h2><ol>
+<li><p>编译:编译器一次把所有*.java文件转成 *.class字节码文件。</p>
+</li>
+<li><p>类加载:java虚拟机首先将编译好的字节码文件加载到内存。</p>
+</li>
+<li><p>解释执行:java虚拟机针对加载到内存中的Java类进行解释运行。</p>
+<p>总结:java程序是由虚拟机进行解释运行的，而不是操作系统。</p>
+</li>
+</ol>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="强类型语言"><a href="#强类型语言" class="headerlink" title="强类型语言"></a>强类型语言</h3><p>要求变量的使用要严格符合规定，所有变量必须先定义后才能使用。</p>
+<h3 id="Java数据类型分为两大类"><a href="#Java数据类型分为两大类" class="headerlink" title="Java数据类型分为两大类"></a>Java数据类型分为两大类</h3><ul>
+<li>基本类型</li>
+<li>引用类型</li>
+</ul>
+<h3 id="浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。"><a href="#浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。" class="headerlink" title="浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。"></a>浮点数类型是有限、离散、舍入误差的、接近的。不用浮点数比较和计算。</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> f=<span class="number">0.1f</span>;</span><br><span class="line"><span class="keyword">double</span> d=<span class="number">1.0</span>/<span class="number">10</span>;</span><br><span class="line">System.out.println(f==d);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">float</span> d1=<span class="number">2332222445555f</span>;</span><br><span class="line"><span class="keyword">float</span> d2=d1+<span class="number">1</span>;</span><br><span class="line">System.out.println(d1);<span class="comment">//2.33222255E12</span></span><br><span class="line">System.out.println(d2);<span class="comment">//2.33222255E12</span></span><br><span class="line">System.out.println(d1==d2);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。"><a href="#java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。" class="headerlink" title="java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。"></a>java是强类型语言，因此在进行有些运算的时候，需要用到类型转换。</h3><p>这里的有些运算指的是java数据类型中<strong>基本类型</strong>，除boolean类型外。</p>
+<p>byte，short，char，int，long，float，double</p>
+<p>低————————————————高</p>
+<h3 id="运算中，不同类型的数据先转化位同一类型，然后运算。"><a href="#运算中，不同类型的数据先转化位同一类型，然后运算。" class="headerlink" title="运算中，不同类型的数据先转化位同一类型，然后运算。"></a>运算中，不同类型的数据先转化位同一类型，然后运算。</h3><p>运算中，范围小的会自动转换成范围大的。</p>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><p>范围大的转成范围小的</p>
+<h3 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h3><p>范围小的转成范围大的</p>
+<h3 id="内存溢出"><a href="#内存溢出" class="headerlink" title="内存溢出"></a>内存溢出</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">129</span>;</span><br><span class="line"><span class="keyword">byte</span> b1=(<span class="keyword">byte</span>)i;</span><br><span class="line">System.out.println(b1);<span class="comment">//-127 byte类型的范围是[-128,127],给129内存溢出了</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> money=<span class="number">10_0000_0000</span>;</span><br><span class="line"><span class="keyword">int</span> years=<span class="number">20</span>;</span><br><span class="line"><span class="keyword">int</span> total1=money*years;<span class="comment">//-1474836480 内存溢出</span></span><br><span class="line"><span class="keyword">long</span> total2=money*years;<span class="comment">//-1474836480 内存依然溢出，因为计算后的数据类型依然时int，转换成long之前已经出现问题</span></span><br><span class="line"><span class="keyword">long</span> total3=((<span class="keyword">long</span>)money)*years;<span class="comment">//20000000000</span></span><br><span class="line">System.out.println(total3);</span><br></pre></td></tr></table></figure>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+          
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+  <article id="post-帆软" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2021-11-26T13:01:51.889Z" itemprop="datePublished">2021年11月26日</time>
+</span>
+      
+      
+      
+<a href="/2021/11/26/%E5%B8%86%E8%BD%AF/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="帆软"><a href="#帆软" class="headerlink" title="帆软"></a>帆软</h1><h2 id="1-点击查询前显示所有内容"><a href="#1-点击查询前显示所有内容" class="headerlink" title="1.点击查询前显示所有内容"></a>1.点击查询前显示所有内容</h2><p>点击参数栏，参数栏的属性取消勾选<strong>点击查询前不显示报表内容</strong>。</p>
+<h2 id="2-给报表内容插序号"><a href="#2-给报表内容插序号" class="headerlink" title="2.给报表内容插序号"></a>2.给报表内容插序号</h2>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+          
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
   <article id="post-生日计时" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner">
     
@@ -453,6 +570,14 @@
       <ul>
         
           <li>
+            <a href="/2021/11/27/%E5%9F%BA%E7%A1%80/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/26/%E5%B8%86%E8%BD%AF/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2021/11/16/%E7%94%9F%E6%97%A5%E8%AE%A1%E6%97%B6/">生日计时</a>
           </li>
         
@@ -462,14 +587,6 @@
         
           <li>
             <a href="/2021/10/12/Markdown%E7%9A%84%E5%9D%91/">Markdown的坑</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/09/Hexo%E6%90%AD%E5%BB%BA%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">Hexo搭建遇到的问题</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/09/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -501,7 +618,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title"><i class="fa fa-archive"></i> 归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021年11月</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021年11月</a><span class="archive-list-count">7</span></li></ul>
     </div>
   </div>
 
