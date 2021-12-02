@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   
   
-  <title>java基础复习1 | 很一般</title>
+  <title>java基础复习 | 很一般</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   
@@ -77,7 +77,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-基础1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner">
     
     
@@ -85,7 +85,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      java基础复习1
+      java基础复习
     </h1>
   
 
@@ -114,7 +114,7 @@
 
       
       
-<a href="/2021/11/26/%E5%9F%BA%E7%A1%80/#comments" class="article-comment-link">
+<a href="/2021/11/26/%E5%9F%BA%E7%A1%801/#comments" class="article-comment-link">
   
     
     
@@ -209,7 +209,7 @@
 <li>接下来，JVM将继续执行后续指令，在堆区里继续创建另一个Sample类的实例，然后依次执行它们的printName()方法。当JVM执行test1.printName()方法时，<font color="red">JVM根据局部变量test1持有的引用，定位到堆中的Sample类的实例，再根据Sample类的实例持有的引用，定位到方法区中Sample类的类型信息（包括①类，②静态变量，③静态方法，④常量和⑤成员方法），从而获取printName()成员方法的字节码，接着执行printName()成员方法包含的指令。</font>&gt;</li>
 </ol>
 <h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://static.oschina.net/uploads/img/201606/30121435_meYB.jpg"></p>
-<h2 id="八、栈中的变量是临时的"><a href="#八、栈中的变量是临时的" class="headerlink" title="八、栈中的变量是临时的"></a>八、栈中的变量是临时的</h2><p>基本数据类型、局部变量都是存放在<font color="red"><strong>栈内存中的，用完就消失。</strong></font>&gt;<br>new创建的实例化对象及数组，是存放在<font color="red"><strong>堆内存中的，用完之后靠垃圾回收机制不定期自动消除。</strong></font>&gt;</p>
+<h2 id="八、栈中的变量是临时的"><a href="#八、栈中的变量是临时的" class="headerlink" title="八、栈中的变量是临时的"></a>八、栈中的变量是临时的</h2><p>基本数据类型、局部变量都是存放在栈内存中的，用完就消失。<br>new创建的实例化对象及数组，是存放在堆内存中的，用完之后靠垃圾回收机制不定期自动消除。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppMain</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> x=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        show();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> x=<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="执行顺序"><a href="#执行顺序" class="headerlink" title="执行顺序"></a>执行顺序</h4><p>第1步——main()函数是程序入口，JVM先执行，在栈内存中开辟一个空间，存放int类型变量x，同时附值1。<br>第2步——JVM执行show()函数，在栈内存中又开辟一个新的空间，存放int类型变量x，同时附值2。<br>　　　　　此时main空间与show空间并存，同时运行，互不影响。<br>第3步——show()执行完毕，变量x立即释放，空间消失。但是main()函数空间仍存在，main中的变量x仍然存在，不受影响。</p>
@@ -248,19 +248,19 @@
         
 <nav id="article-nav">
   
-    <a href="/2021/11/30/%E5%9F%BA%E7%A1%802/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/11/26/%E5%9F%BA%E7%A1%80/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          java基础复习1
         
       </div>
     </a>
   
   
-    <a href="/2021/11/26/%E5%9F%BA%E7%A1%801/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/11/26/%E5%B8%86%E8%BD%AF/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">older</strong>
-      <div class="article-nav-title">java基础复习</div>
+      <div class="article-nav-title">帆软</div>
     </a>
   
 </nav>
